@@ -1,4 +1,17 @@
-<h1>計算</h1>
-<p>
-  1 + 1 は<%= 1 + 1 %>
-</p>
+<h1>slim2erbっぽいやつ</h1>
+<%= form_with scope: :slim, url: root_url, method: :get do |f| %>
+  <%= f.text_area :text, size: '80x10' %>
+  <%= f.submit %>
+<% end %>
+<div>
+  <h2>
+    slim
+  </h2>
+  <%= @slim_text %>
+</div>
+<div>
+  <h2>
+    erb
+  </h2>
+  <%= @erb_text %>
+</div>
